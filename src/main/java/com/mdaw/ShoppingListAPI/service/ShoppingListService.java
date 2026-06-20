@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.time.OffsetDateTime;
 import java.util.*;
 
 @Service
@@ -30,9 +31,9 @@ public class ShoppingListService {
 
             if (aisle == null) {
                 LOGGER.info("Item %s is not available".formatted(name));
-                items.add(new Item(name.toUpperCase(), -1));
+                items.add(new Item(name.toUpperCase(), -1, OffsetDateTime.now()));
             } else {
-                items.add(new Item(name.toUpperCase(), aisle));
+                items.add(new Item(name.toUpperCase(), aisle, OffsetDateTime.now()));
             }
         }
 
