@@ -1,0 +1,13 @@
+package com.mdaw.ShoppingListAPI;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ShoppingListApiApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
